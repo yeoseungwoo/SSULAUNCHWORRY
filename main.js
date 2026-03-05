@@ -83,7 +83,7 @@ function initMap() {
     // Theme Toggle
     themeToggle.addEventListener('click', () => {
       document.body.classList.toggle('dark-mode');
-      themeToggle.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
+      themeToggle.textContent = document.body.classList.contains('dark-mode') ? 'Light mode' : 'Black mode';
     });
 
     // Language Toggle

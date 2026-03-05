@@ -63,17 +63,21 @@ header {
 }
 
 #theme-toggle {
-  background: none;
-  border: none;
-  font-size: 1.5rem;
+  background: var(--card-bg);
+  border: 1px solid var(--text-sub);
+  color: var(--text-main);
+  font-size: 0.85rem;
+  font-weight: bold;
   cursor: pointer;
-  padding: 5px;
-  border-radius: 50%;
-  transition: background 0.2s;
+  padding: 5px 12px;
+  border-radius: 20px;
+  transition: all 0.2s;
 }
 
 #theme-toggle:hover {
-  background: rgba(128, 128, 128, 0.1);
+  background: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
 }
 
 #lang-select {
