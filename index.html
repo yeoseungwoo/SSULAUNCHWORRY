@@ -1,14 +1,49 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hello World</title>
-  <link href='/style.css' rel='stylesheet'>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>망한숭실대 상권에서도 밥은 먹자</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1>Hello, world!</h1>
-  <button onclick="console.log('hello');">Press me</button>
-  <script defer type="text/javascript" src="/main.js"></script>
+  <header>
+    <h1>망한숭실대 상권에서도 밥은 먹자 🍱</h1>
+    <p>숭실대학교 주변의 "진흙 속의 진주" 같은 식당을 추천해드립니다.</p>
+  </header>
+
+  <main>
+    <div id="map-container">
+      <div id="map"></div>
+      <div id="controls">
+        <button id="recommend-btn">오늘 뭐 먹지? (랜덤 추천)</button>
+      </div>
+    </div>
+
+    <div id="result-panel" class="hidden">
+      <div class="result-card">
+        <button id="exit-result" class="exit-btn">&times;</button>
+        <h2 id="place-name">식당 이름</h2>
+        <p id="place-address">식당 주소</p>
+        <div class="place-info">
+          <span id="place-rating">⭐ 0.0</span>
+          <span id="place-status">영업 중</span>
+        </div>
+        <button id="close-result">다시 추천받기</button>
+      </div>
+    </div>
+  </main>
+
+  <div id="loader" class="hidden">
+    <div class="spinner"></div>
+    <p>맛집 찾는 중...</p>
+  </div>
+
+  <!-- Google Maps API - Replace YOUR_API_KEY with an actual key -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBb8JWF-ka8WoacluxXBv5nwamc216ggvo&libraries=places&language=ko&region=KR"></script>
+  <script defer src="main.js"></script>
 </body>
 </html>
