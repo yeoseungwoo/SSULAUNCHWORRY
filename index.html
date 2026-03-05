@@ -11,8 +11,15 @@
 </head>
 <body>
   <header>
-    <h1>망한숭실대 상권에서도 밥은 먹자 🍱</h1>
-    <p>숭실대학교 주변의 "진흙 속의 진주" 같은 식당을 추천해드립니다.</p>
+    <div class="settings-bar">
+      <button id="theme-toggle" title="테마 변경">🌙</button>
+      <select id="lang-select">
+        <option value="ko">한국어 (KR)</option>
+        <option value="en">English (EN)</option>
+      </select>
+    </div>
+    <h1 id="main-title">망한숭실대 상권에서도 밥은 먹자 🍱</h1>
+    <p id="main-subtitle">숭실대학교 주변의 "진흙 속의 진주" 같은 식당을 추천해드립니다.</p>
   </header>
 
   <main>
@@ -53,10 +60,10 @@
 
   <div id="loader" class="hidden">
     <div class="spinner"></div>
-    <p>맛집 찾는 중...</p>
+    <p id="loader-text">맛집 찾는 중...</p>
   </div>
 
-  <!-- Google Maps API - Replace YOUR_API_KEY with an actual key -->
+  <!-- Google Maps API -->
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBb8JWF-ka8WoacluxXBv5nwamc216ggvo&libraries=places&language=ko&region=KR"></script>
   <script defer src="main.js"></script>
 </body>
